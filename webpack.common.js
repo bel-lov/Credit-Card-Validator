@@ -6,6 +6,7 @@ module.exports = {
   target: 'web',
   output: {
     path: path.resolve(__dirname, 'dist'),
+    assetModuleFilename: 'assets/[name][ext]',
     publicPath: '',
   },
   module: {
