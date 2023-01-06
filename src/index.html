@@ -9,8 +9,33 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="page">
+        <h1 class="title">Validate Credit Card Numbers</h1>
+        <div class="wrapper">
+            <div class="wrapper-check-card">
+                <h2>Check your credit card number</h2>
+                <div class="container">
+                    <ul class="cards">
+                        <li class="card visa" title="Visa"><img class="img" src="./img/visa.png" alt="Visa"></li>
+                        <li class="card master" title="Mastercard"><img class="img" src="./img/mastercard.png"
+                                alt="Mastercard">
+                        </li>
+                        <li class="card amex" title="American Express"><img class="img" src="./img/american-express.png"
+                                alt="American Express">
+                        </li>
+                        <li class="card mir" title="Mir"><img class="img" src="./img/mir.svg" alt="Mir"></li>
+                    </ul>
+                </div>
+                <div class="filter-container">
+                    <!-- <form class="filter-widget-form"> -->
+                    <input class="form-control col-md-6" id="card_number" name="card_number" type="text"
+                        placeholder="Credit card number" title="">
+                    <a id="submitform" class="btn btn-success">Click to Validate</a>
+                    <!-- </form> -->
+                </div>
 
+            </div>
+        </div>
     </div>
 </body>
 

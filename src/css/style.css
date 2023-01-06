@@ -2,6 +2,86 @@
     box-sizing: border-box;
 }
 
-body {
-    background-color: #1D1E22;
+*/ body {
+    background-color: #b4bc72;
+}
+
+.page {
+    display: block;
+}
+
+.wrapper-check-card {
+    border: rgb(36, 64, 42) solid 3px;
+    border-radius: 10px;
+    padding-bottom: 20px;
+    background-color: darkgray;
+    padding: 30px 30px;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    text-align: center;
+}
+
+.cards {
+    display: flex;
+    background-color: lightslategrey;
+}
+
+.card {
+    list-style: none;
+}
+
+.img {
+    width: 200px;
+    height: 200px;
+    margin-right: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.filter-container {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+}
+
+#submitform {
+    margin-left: 10px;
+}
+
+.btn-success {
+    color: #fff;
+    background-color: #5cb85c;
+    border-color: #4cae4c;
+}
+
+.btn {
+    display: inline-block;
+    padding: 20px 30px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    user-select: none;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+
+.form-control {
+    flex: 1;
+    font-size: 20px;
+    padding: 10px;
 }
