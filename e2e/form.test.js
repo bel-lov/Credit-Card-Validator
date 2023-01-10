@@ -2,43 +2,44 @@ import puppeteer from "puppeteer";
 
 jest.setTimeout(30000);
 
-describe('in form', () => {
-    let browser;
-    let page;
+describe("in form", () => {
+  let browser;
+  let page;
 
-    //запуск браузера
-    beforeEach(async () => {
-        browser = await puppeteer.launch({//опции при запуске браузера
-            headless: false,//чтобы показывать реальный браузер
-            slowMo: 250,
-            // devtools: true,//чтобы видеть инструменты разработчика
-        });
-
-        page = await browser.newPage()
+  //запуск браузера
+  beforeEach(async () => {
+    browser = await puppeteer.launch({
+      //опции при запуске браузера
+      headless: false, //чтобы показывать реальный браузер
+      slowMo: 250,
+      // devtools: true,//чтобы видеть инструменты разработчика
     });
 
-    // закрыть браузер
-    afterAll(async () => {
-        await browser.close();
-    });
+    page = await browser.newPage();
+  });
 
-    test('form should render on page', async () => {
-        await page.goto("http://localhost:9000");
+  // закрыть браузер
+  afterAll(async () => {
+    await browser.close();
+  });
 
-        await page.waitForSelector(".filter-widget-form");//этот метод заставит браузер ждать появления селектора body
-    });
+  test("form should render on page", async () => {
+    await page.goto("http://localhost:9000");
 
-    test('valid form', async () => {
-        await page.goto("http://localhost:9000");
+    await page.waitForSelector(".filter-widget-form"); //этот метод заставит браузер ждать появления селектора body
+  });
 
-        await page.waitForSelector(".filter-widget-form");//этот метод заставит браузер ждать появления селектора body
+  test("valid form", async () => {
+    await page.goto("http://localhost:9000");
 
-        const form = await page.$('.filter-widget-form');
-        const input = await form.$('.form-control');
-        const button = await form.$('.btn');
-        await input.type('2202200112561350');
-        await button.click();
+    await page.waitForSelector(".filter-widget-form"); //этот метод заставит браузер ждать появления селектора body
 
-        await page.waitForSelector(".filter-widget-form")
-    });
+    const form = await page.$(".filter-widget-form");
+    const input = await form.$(".form-control");
+    const button = await form.$(".btn");
+    await input.type("2202200112561350");
+    await button.click();
+
+    await page.waitForSelector(".filter-widget-form");
+  });
 });
