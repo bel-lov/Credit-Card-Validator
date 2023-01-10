@@ -3,6 +3,7 @@ import puppeteer from "puppeteer";
 describe('page start', () => {
     let browser;
     let page;
+    const baseUrl = 'http://localhost:9000';
 
     //запуск браузера
     beforeEach(async () => {
@@ -16,13 +17,12 @@ describe('page start', () => {
     });
 
     test('test', async () => {
-        await page.goto("http://localhost:9000");
-
+        await page.goto(baseUrl);
         await page.waitForSelector("body");//этот метод заставит браузер ждать появления селектора body
     });
 
     //закрыть браузер
-    // afterAll(async () => {
-    //     await browser.close();
-    // });
+    afterAll(async () => {
+        await browser.close();
+    });
 });

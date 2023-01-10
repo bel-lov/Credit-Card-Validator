@@ -24,7 +24,27 @@ body {
 }
 
 .visa {
-    background-image: url("/src/img/visa.png");
+    background-image: url("../img/visa.png");
+}
+
+.master {
+    background-image: url("../img/mastercard.png");
+}
+
+.amex {
+    background-image: url("../img/american-express.png");
+}
+
+.discover {
+    background-image: url("../img/discover.png");
+}
+
+.mir {
+    background-image: url("../img/mir.svg");
+}
+
+.jcb {
+    background-image: url("../img/jcb.png");
 }
 
 .wrapper-check-card {
@@ -52,22 +72,38 @@ body {
 
 .card {
     list-style: none;
+    width: 150px;
+    height: 200px;
+    margin-right: 10px;
 }
 
 .img {
-    width: 200px;
+    width: 150px;
     height: 200px;
-    margin-right: 10px;
 }
 
 h2 {
     text-align: center;
 }
 
+.filter-container {
+    height: 55px;
+}
+
+.form-control {
+    border: 1px solid #000;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 20px;
+    height: 100%;
+    /* padding: 20px 50px; */
+}
+
 .btn {
     border: 1px solid #000;
     border-radius: 5px;
-    padding: 20px 50px;
+    padding: 10px 10px;
+    height: 100%;
     font-size: 20px;
     background-color: rgb(192, 243, 194);
     color: black;
