@@ -130,5 +130,8 @@ h2 {
     font-size: 30px;
     color: rgb(71, 5, 5);
     text-align: center;
+}
 
+.active {
+    opacity: 1;
 }
